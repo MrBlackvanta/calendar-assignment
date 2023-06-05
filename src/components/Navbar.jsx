@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      <div className="navigation-container">{""}</div>
+      <div className="navigation-container"></div>
 
       <div className="profile-container">
         <div className="profile-name">

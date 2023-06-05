@@ -10,7 +10,6 @@
 }
 
 .wrapper::-webkit-scrollbar {
-  background-color: transparent;
   display: none;
 }
 
@@ -40,11 +39,8 @@
 }
 
 .fc-prev-button.fc-button-primary:not(:disabled):active,
-.fc-prev-button.fc-button-primary:not(:disabled):active:focus,
 .fc-next-button.fc-button-primary:not(:disabled):active,
-.fc-next-button.fc-button-primary:not(:disabled):active:focus,
-.fc-today-button.fc-button-primary:not(:disabled):active,
-.fc-today-button.fc-button-primary:not(:disabled):active:focus {
+.fc-today-button.fc-button-primary:not(:disabled):active {
   background-color: #239256;
   border-color: #239256;
   box-shadow: none;
@@ -125,13 +121,6 @@ tr[role="row"] {
   border-bottom-color: var(--fc-border-color);
 }
 
-/* colgroup,
-.fc-timegrid-axis,
-.fc-timegrid-slot-label-frame,
-.fc .fc-timegrid-slot-label {
-  display: none;
-} */
-
 .fc-direction-ltr .fc-timegrid-col-events {
   margin: 0;
 }
@@ -165,7 +154,6 @@ tr.fc-scrollgrid-section-body > td {
 tbody .fc-day-today {
   border-right: 1px solid #e6f6ec !important;
   border-bottom-left-radius: 10px;
-  overflow: hidden;
 }
 
 .fc .fc-timegrid-slot {
@@ -212,12 +200,15 @@ table.fc-col-header {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  cursor: pointer;
+  position: relative;
 }
 
 .event h2 {
   font-weight: 400;
   font-size: 14px;
   color: #231f20;
+  text-overflow: clip;
 }
 
 .eventTime {
@@ -266,4 +257,22 @@ table.fc-col-header {
 
 .event4 .people img:not(:first-of-type) {
   margin-left: -12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .event h2 {
+    font-size: 12px;
+  }
+
+  .eventTime,
+  .eventDuration,
+  .people {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .event h2 {
+    display: none;
+  }
 }
