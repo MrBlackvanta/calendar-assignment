@@ -1,0 +1,43 @@
+/* .event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid;
+  z-index: 99;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #231f20;
+}
+
+.eventTime {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.eventTime span {
+  font-weight: 300;
+  font-size: 14px;
+  color: #635f60;
+}
+
+.event-start::first-letter {
+  font-weight: 400;
+  color: #444041;
+}
+
+.eventDuration {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #444041;
+} */
